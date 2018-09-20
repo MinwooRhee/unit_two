@@ -9,17 +9,20 @@ import math
 import turtle
 
 print("This program will ask you to enter the coordinates of two points in a xy plain.")
+
 print("Then it will draw two lines, one connecting the origin and the first point,")
+
 print("the other connecting the first point and the second point.")
+
 print("It will also tell you the acute angle between the two lines in degrees.")
 
-x_coordinate_first_point = input("Input the x coordinate of the first point: ")
+x_coordinate_first_point = input("Input the x coordinate of the first point, in arabic numbers: ")
 
-y_coordinate_first_point = input("Input the y coordinate of the first point: ")
+y_coordinate_first_point = input("Input the y coordinate of the first point, in arabic numbers: ")
 
-x_coordinate_second_point = input("Input the x coordinate of the second point: ")
+x_coordinate_second_point = input("Input the x coordinate of the second point, in arabic numbers: ")
 
-y_coordinate_second_point = input("Input the y coordinate of the second point: ")
+y_coordinate_second_point = input("Input the y coordinate of the second point, in arabic numbers: ")
 
 slope_first_line = (float(y_coordinate_first_point) - 0) / (float(x_coordinate_first_point) - 0)
 # float() is used because input() takes the input as a string
