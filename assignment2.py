@@ -16,6 +16,8 @@ print("the other connecting the first point and the second point.")
 
 print("It will also tell you the acute angle between the two lines in degrees.")
 
+print("CAUTION : this program will function only when the two lines make an acute angle")
+
 x_coordinate_first_point = input("Input the x coordinate of the first point, in arabic numbers: ")
 
 y_coordinate_first_point = input("Input the y coordinate of the first point, in arabic numbers: ")
@@ -25,6 +27,7 @@ x_coordinate_second_point = input("Input the x coordinate of the second point, i
 y_coordinate_second_point = input("Input the y coordinate of the second point, in arabic numbers: ")
 
 slope_first_line = (float(y_coordinate_first_point) - 0) / (float(x_coordinate_first_point) - 0)
+
 # float() is used because input() takes the input as a string
 
 slope_second_line = (float(y_coordinate_second_point) - float(y_coordinate_first_point)) \
@@ -32,6 +35,7 @@ slope_second_line = (float(y_coordinate_second_point) - float(y_coordinate_first
 
 angle_in_radians = math.atan(abs(slope_first_line - slope_second_line)
                              / (1 + slope_first_line * slope_second_line))
+
 # math.atan() gives the arctangent of the value.
 # abs() gives the absolute value, which is useful when you have t*o subtract smaller variable from a bigger variable.
 
@@ -41,7 +45,7 @@ turtle.speed(5)
 
 turtle.goto(float(x_coordinate_first_point), float(y_coordinate_first_point))
 
-turtle.write(angle_in_degrees)
+turtle.write(angle_in_degrees, move=False, align="left", font=("Arial", 16, "bold"))
 
 turtle.goto(float(x_coordinate_second_point), float(y_coordinate_second_point))
 
